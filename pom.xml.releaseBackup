@@ -1,0 +1,93 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.devops</groupId>
+  <artifactId>helloworldmavenpipeline</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0.0</version>
+  <name>helloworldmavenpipeline</name>
+  <url>http://maven.apache.org</url>
+  
+  <dependencies>
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.17</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/junit/junit -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+<!--
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-deploy-plugin:2.7:deploy (default-deploy) on project helloworld: Failed to deploy artifacts/metadata: Cannot access dav:http://7kwdf02/nexus/content/repositories/assuranceRcpSnapshots/ with type default using the available connector factories: BasicRepositoryConnectorFactory: Cannot access dav:http://7kwdf02/nexus/content/repositories/assuranceRcpSnapshots/ using the registered transporter factories: WagonTransporterFactory: java.util.NoSuchElementException
+[ERROR]       role: org.apache.maven.wagon.Wagon
+[ERROR]   roleHint: dav
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException-
+-->    
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-webdav-jackrabbit</artifactId>
+        <version>1.0-beta-7</version>
+      </extension>
+<!--
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-webdav</artifactId>
+        <version>1.0-beta-2</version>
+      </extension>
+-->      
+    </extensions>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.5.3</version>
+        <configuration>
+          <tagNameFormat>v@{project.version}</tagNameFormat>
+        </configuration>
+      </plugin>
+    </plugins>
+    
+  </build>
+
+  <scm>
+    <connection>scm:git:git://github.com/thomasfourest/helloworldmavenpipeline.git</connection>
+    <developerConnection>scm:git:git@github.com:thomasfourest/helloworldmavenpipeline.git</developerConnection>
+    <tag>v1.0.0</tag>
+  </scm>
+  
+<!--
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-deploy-plugin:2.7:deploy (default-deploy) on project helloworld: Deployment failed: repository element was not specified in the POM inside distributionManagement element or in -DaltDeploymentRepository=id::layout::url parameter -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+-->  
+ <distributionManagement>
+    <repository>
+      <id>deploy.nexus</id>
+      <name>release nexus repository</name>
+      <url>dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationRelease/</url>
+    </repository>
+    <snapshotRepository>
+      <id>deploy.nexus</id>
+      <name>snapshot nexus repository</name>
+      <url>dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/</url>
+    </snapshotRepository>
+ </distributionManagement>
+
+</project>
