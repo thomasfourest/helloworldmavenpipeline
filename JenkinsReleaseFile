@@ -23,7 +23,7 @@ pipeline {
     stage('Checkout master branch') {
       dir("masterbranch"){
 //        git branch: "master", credentialsId: 'mycred', url: 'https://github.com/thomasfourest/helloworldmavenpipeline.git'
-        git branch: "master", url: 'https://github.com/thomasfourest/helloworldmavenpipeline.git
+        git branch: "master", url: 'https://github.com/thomasfourest/helloworldmavenpipeline.git'
       }
     }
 
