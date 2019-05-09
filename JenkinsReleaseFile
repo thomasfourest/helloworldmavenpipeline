@@ -19,11 +19,18 @@ pipeline {
   }
 
   stages{
-  
+
+    stage('clean') {
+      steps{
+        deleteDir()
+      }
+    }
     stage('Checkout master branch') {
-      dir("masterbranch"){
-//        git branch: "master", credentialsId: 'mycred', url: 'https://github.com/thomasfourest/helloworldmavenpipeline.git'
-        git branch: "master", url: 'https://github.com/thomasfourest/helloworldmavenpipeline.git'
+      steps{
+        dir("masterbranch"){
+//          git branch: "master", credentialsId: 'mycred', url: 'https://github.com/thomasfourest/helloworldmavenpipeline.git'
+          git branch: "master", url: 'https://github.com/thomasfourest/helloworldmavenpipeline.git'
+        }
       }
     }
 
@@ -41,6 +48,25 @@ pipeline {
 	  sh "mvn -Dresume=false release:prepare release:perform"
         }
       }
+    }
+  }
+
+  post {
+    always {
+      junit allowEmptyResults: true, testResults: '**/target/surefire-reports/TEST*.xml'
+      echo 'clean up our workspace'
+      script {
+        def wrkspcDir = pwd()
+        dir("${wrkspcDir}@script") {
+          println "delete ${wrkspcDir}@script"
+          deleteDir()
+        }
+        dir("${wrkspcDir}@tmp") {
+          println "delete ${wrkspcDir}@tmp"
+          deleteDir()
+        }
+      }
+      cleanWs cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenUnstable: true, notFailBuild: true
     }
   }
 
