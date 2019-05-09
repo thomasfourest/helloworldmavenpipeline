@@ -1,0 +1,211 @@
+Démarré par l'utilisateur Thomas FOUREST
+Obtained Jenkinsfile from git git://github.com/thomasfourest/helloworldmavenpipeline.git
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] node
+Running on SandboxNode in /ssdprod/jenkins/sandboxNode/home/workspace/helloworldmavenpipeline
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+Fetching changes from the remote Git repository
+Checking out Revision d065f843d1084281a155e64cef1fdfb25277bc95 (refs/remotes/origin/master)
+Commit message: "configuration release pipeline with github"
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Tool Install)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Build and deploy)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] echo
+JAVA_HOME = /ssdprod/jenkins/sandboxNode/home/tools/hudson.model.JDK/jdk1.8.0_u144
+[Pipeline] withMaven
+[withMaven] Options: []
+[withMaven] Available options: 
+[withMaven] using JDK installation provided by the build agent
+[withMaven] using Maven installation 'maven 3.6.0'
+[Pipeline] {
+[Pipeline] echo
+M2_HOME = /ssdprod/jenkins/sandboxNode/home/tools/hudson.tasks.Maven_MavenInstallation/maven_3.6.0
+[Pipeline] echo
+PATH = /ssdprod/jenkins/sandboxNode/home/workspace/helloworldmavenpipeline@tmp/withMavend90ba975:/ssdprod/jenkins/sandboxNode/home/tools/hudson.model.JDK/jdk1.8.0_u144/bin:/ssdprod/jenkins/sandboxNode/home/tools/hudson.model.JDK/jdk1.8.0_u144/bin:/sbin:/usr/sbin:/bin:/usr/bin
+[Pipeline] sh
+ > git rev-parse --is-inside-work-tree # timeout=10
+ > git config remote.origin.url git://github.com/thomasfourest/helloworldmavenpipeline.git # timeout=10
+Fetching upstream changes from git://github.com/thomasfourest/helloworldmavenpipeline.git
+ > git --version # timeout=10
+ > git fetch --tags --progress git://github.com/thomasfourest/helloworldmavenpipeline.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f d065f843d1084281a155e64cef1fdfb25277bc95
+ > git rev-list --no-walk 14ba842d48ab98620237e066ef59ca8ffdd40fb1 # timeout=10
++ mvn clean deploy -U
+----- withMaven Wrapper script -----
+Picked up JAVA_TOOL_OPTIONS: -Dmaven.ext.class.path="/ssdprod/jenkins/sandboxNode/home/workspace/helloworldmavenpipeline@tmp/withMavend90ba975/pipeline-maven-spy.jar" -Dorg.jenkinsci.plugins.pipeline.maven.reportsFolder="/ssdprod/jenkins/sandboxNode/home/workspace/helloworldmavenpipeline@tmp/withMavend90ba975" 
+Apache Maven 3.6.0 (97c98ec64a1fdfee7767ce5ffb20918da4f719f3; 2018-10-24T20:41:47+02:00)
+Maven home: /ssdprod/jenkins/sandboxNode/home/tools/hudson.tasks.Maven_MavenInstallation/maven_3.6.0
+Java version: 1.8.0_144, vendor: Oracle Corporation, runtime: /ssdprod/jenkins/sandboxNode/home/tools/hudson.model.JDK/jdk1.8.0_u144/jre
+Default locale: fr_FR, platform encoding: UTF-8
+OS name: "linux", version: "3.8.13-118.17.4.el6uek.x86_64", arch: "amd64", family: "unix"
+[INFO] [jenkins-event-spy] Generate /ssdprod/jenkins/sandboxNode/home/workspace/helloworldmavenpipeline@tmp/withMavend90ba975/maven-spy-20190509-162918-927852351629229477054.log.tmp ...
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< com.devops:helloworldmavenpipeline >-----------------
+[INFO] Building helloworldmavenpipeline 1.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ helloworldmavenpipeline ---
+[INFO] Deleting /ssdprod/jenkins/sandboxNode/home/workspace/helloworldmavenpipeline/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ helloworldmavenpipeline ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ helloworldmavenpipeline ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to /ssdprod/jenkins/sandboxNode/home/workspace/helloworldmavenpipeline/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ helloworldmavenpipeline ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ helloworldmavenpipeline ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to /ssdprod/jenkins/sandboxNode/home/workspace/helloworldmavenpipeline/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ helloworldmavenpipeline ---
+[INFO] Surefire report directory: /ssdprod/jenkins/sandboxNode/home/workspace/helloworldmavenpipeline/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Picked up JAVA_TOOL_OPTIONS: -Dmaven.ext.class.path="/ssdprod/jenkins/sandboxNode/home/workspace/helloworldmavenpipeline@tmp/withMavend90ba975/pipeline-maven-spy.jar" -Dorg.jenkinsci.plugins.pipeline.maven.reportsFolder="/ssdprod/jenkins/sandboxNode/home/workspace/helloworldmavenpipeline@tmp/withMavend90ba975" 
+Running com.devops.MyHelloTest
+2019-05-09 16:29:20 DEBUG MyHello:22 - This is debug : Hello
+2019-05-09 16:29:20 INFO  MyHello:26 - This is info : Hello
+2019-05-09 16:29:20 WARN  MyHello:29 - This is warn : Hello
+2019-05-09 16:29:20 ERROR MyHello:30 - This is fake error : Hello
+2019-05-09 16:29:20 FATAL MyHello:31 - This is fake fatal : Hello
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.136 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ helloworldmavenpipeline ---
+[INFO] Building jar: /ssdprod/jenkins/sandboxNode/home/workspace/helloworldmavenpipeline/target/helloworldmavenpipeline-1.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ helloworldmavenpipeline ---
+[INFO] Installing /ssdprod/jenkins/sandboxNode/home/workspace/helloworldmavenpipeline/target/helloworldmavenpipeline-1.0.1-SNAPSHOT.jar to /var/lib/jenkins/.m2/repository/com/devops/helloworldmavenpipeline/1.0.1-SNAPSHOT/helloworldmavenpipeline-1.0.1-SNAPSHOT.jar
+[INFO] Installing /ssdprod/jenkins/sandboxNode/home/workspace/helloworldmavenpipeline/pom.xml to /var/lib/jenkins/.m2/repository/com/devops/helloworldmavenpipeline/1.0.1-SNAPSHOT/helloworldmavenpipeline-1.0.1-SNAPSHOT.pom
+[INFO] 
+[INFO] --- maven-deploy-plugin:2.7:deploy (default-deploy) @ helloworldmavenpipeline ---
+[INFO] Downloading from deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/com/devops/helloworldmavenpipeline/1.0.1-SNAPSHOT/maven-metadata.xml
+mai 09, 2019 4:29:21 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+mai 09, 2019 4:29:21 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+[INFO] Downloaded from deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/com/devops/helloworldmavenpipeline/1.0.1-SNAPSHOT/maven-metadata.xml (783 B at 4.4 kB/s)
+[INFO] Uploading to deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/com/devops/helloworldmavenpipeline/1.0.1-SNAPSHOT/helloworldmavenpipeline-1.0.1-20190509.142921-2.jar
+mai 09, 2019 4:29:21 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+mai 09, 2019 4:29:21 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+mai 09, 2019 4:29:21 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+mai 09, 2019 4:29:21 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+mai 09, 2019 4:29:21 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+mai 09, 2019 4:29:21 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+[INFO] Uploaded to deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/com/devops/helloworldmavenpipeline/1.0.1-SNAPSHOT/helloworldmavenpipeline-1.0.1-20190509.142921-2.jar (8.2 kB at 63 kB/s)
+[INFO] Uploading to deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/com/devops/helloworldmavenpipeline/1.0.1-SNAPSHOT/helloworldmavenpipeline-1.0.1-20190509.142921-2.pom
+mai 09, 2019 4:29:21 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+mai 09, 2019 4:29:21 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+mai 09, 2019 4:29:21 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+mai 09, 2019 4:29:21 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+mai 09, 2019 4:29:21 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+mai 09, 2019 4:29:21 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+[INFO] Uploaded to deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/com/devops/helloworldmavenpipeline/1.0.1-SNAPSHOT/helloworldmavenpipeline-1.0.1-20190509.142921-2.pom (8.0 kB at 122 kB/s)
+[INFO] Downloading from deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/com/devops/helloworldmavenpipeline/maven-metadata.xml
+mai 09, 2019 4:29:21 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+mai 09, 2019 4:29:21 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+[INFO] Downloaded from deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/com/devops/helloworldmavenpipeline/maven-metadata.xml (293 B at 10 kB/s)
+[INFO] Uploading to deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/com/devops/helloworldmavenpipeline/1.0.1-SNAPSHOT/maven-metadata.xml
+mai 09, 2019 4:29:21 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+mai 09, 2019 4:29:21 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+mai 09, 2019 4:29:21 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+mai 09, 2019 4:29:21 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+mai 09, 2019 4:29:21 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+mai 09, 2019 4:29:21 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+[INFO] Uploaded to deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/com/devops/helloworldmavenpipeline/1.0.1-SNAPSHOT/maven-metadata.xml (1.6 kB at 26 kB/s)
+[INFO] Uploading to deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/com/devops/helloworldmavenpipeline/maven-metadata.xml
+mai 09, 2019 4:29:21 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+mai 09, 2019 4:29:21 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+mai 09, 2019 4:29:21 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+mai 09, 2019 4:29:21 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+mai 09, 2019 4:29:21 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+mai 09, 2019 4:29:21 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+[INFO] Uploaded to deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/com/devops/helloworldmavenpipeline/maven-metadata.xml (586 B at 8.4 kB/s)
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.603 s
+[INFO] Finished at: 2019-05-09T16:29:21+02:00
+[INFO] ------------------------------------------------------------------------
+[INFO] [jenkins-event-spy] Generated /ssdprod/jenkins/sandboxNode/home/workspace/helloworldmavenpipeline@tmp/withMavend90ba975/maven-spy-20190509-162918-927852351629229477054.log
+[Pipeline] }
+[withMaven] Publishers: 
+[Pipeline] // withMaven
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS

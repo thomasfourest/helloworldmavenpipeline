@@ -36,16 +36,18 @@ pipeline {
 
     stage("release and deploy"){
       steps{
-	echo "JAVA_HOME = ${JAVA_HOME}"
-	withMaven(maven: 'maven 3.6.0', mavenOpts: "$MAVEN_OPTS", mavenSettingsConfig: 'maven.settings.xml', publisherStrategy: 'EXPLICIT') {
-          echo "M2_HOME = ${M2_HOME}"
-          echo "PATH = ${PATH}"
+        dir("masterbranch"){
+	  echo "JAVA_HOME = ${JAVA_HOME}"
+	  withMaven(maven: 'maven 3.6.0', mavenOpts: "$MAVEN_OPTS", mavenSettingsConfig: 'maven.settings.xml', publisherStrategy: 'EXPLICIT') {
+            echo "M2_HOME = ${M2_HOME}"
+            echo "PATH = ${PATH}"
 /*
-          withCredentials([usernamePassword(credentialsId: 'mycred', passwordVariable: 'PWD', usernameVariable: 'USERNAME')]) {
-            sh "mvn -Dresume=false -Dusername=$USERNAME -Dpassword=$PWD release:prepare release:perform"
-	  }
+            withCredentials([usernamePassword(credentialsId: 'mycred', passwordVariable: 'PWD', usernameVariable: 'USERNAME')]) {
+              sh "mvn -Dresume=false -Dusername=$USERNAME -Dpassword=$PWD release:prepare release:perform"
+	    }
 */
-	  sh "mvn -Dresume=false release:prepare release:perform"
+	    sh "mvn -Dresume=false release:prepare release:perform"
+	  }  
         }
       }
     }
