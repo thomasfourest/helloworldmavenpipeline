@@ -46,6 +46,10 @@ pipeline {
               sh "mvn -Dresume=false -Dusername=$USERNAME -Dpassword=$PWD release:prepare release:perform"
 	    }
 */
+/*
+  generate a ssh key on jenkins host : ssh-keygen -t rsa -b 4096 -C "thomas.fourest@gmail.com"
+  and add the public key in github : https://github.com/settings/keys  
+*/
 	    sh "mvn -Dresume=false -Dusername=git release:prepare release:perform -X -e"
 	  }  
         }
