@@ -46,7 +46,7 @@ pipeline {
               sh "mvn -Dresume=false -Dusername=$USERNAME -Dpassword=$PWD release:prepare release:perform"
 	    }
 */
-	    sh "mvn -Dresume=false -Dusername=thomasfourest release:prepare release:perform -X -e"
+	    sh "mvn -Dresume=false -Dusername=thomas.fourest@gmail.com release:prepare release:perform -X -e"
 	  }  
         }
       }
