@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.devops</groupId>
   <artifactId>helloworldmavenpipeline</artifactId>
-  <version>1.0.2-SNAPSHOT</version>
+  <version>1.0.2</version>
   <name>helloworldmavenpipeline</name>
   <url>http://maven.apache.org</url>
   
@@ -74,7 +74,8 @@
           <tagNameFormat>v@{project.version}</tagNameFormat>
           <autoVersionSubmodules>true</autoVersionSubmodules>
           <useReleaseProfile>false</useReleaseProfile>
-          <developmentVersion>${parsedVersion.majorVersion}.${parsedVersion.nextMinorVersion}.0-SNAPSHOT</developmentVersion>
+	  <releaseVersion>${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}</releaseVersion>
+          <developmentVersion>${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.nextIncrementalVersion}-SNAPSHOT</developmentVersion>
         </configuration>
       </plugin>
     </plugins>
@@ -84,7 +85,7 @@
   <scm>
     <connection>scm:git:git://github.com/thomasfourest/helloworldmavenpipeline.git</connection>
     <developerConnection>scm:git:git@github.com:thomasfourest/helloworldmavenpipeline.git</developerConnection>
-    <tag>v1.0.0</tag>
+    <tag>v1.0.2</tag>
   </scm>
   
 <!--
