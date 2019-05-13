@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.devops</groupId>
   <artifactId>helloworldmavenpipeline</artifactId>
-  <version>${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.nextIncrementalVersion}-SNAPSHOT</version>
+  <version>1.0.6-SNAPSHOT</version>
   <name>helloworldmavenpipeline</name>
   <url>http://maven.apache.org</url>
   
@@ -49,6 +49,7 @@
 -->      
     </extensions>
     <plugins>
+<!-- use to auto fill release version in local build : doesn't need and doesn't work on jenkins
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
@@ -66,17 +67,20 @@
           </execution>
         </executions>
       </plugin>
+-->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-release-plugin</artifactId>
         <version>2.5.3</version>
         <configuration>
           <tagNameFormat>v@{project.version}</tagNameFormat>
+<!-- use to auto fill release version in local build : doesn't need and doesn't work on jenkins
           <tag>v${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}</tag>
           <autoVersionSubmodules>true</autoVersionSubmodules>
           <useReleaseProfile>false</useReleaseProfile>
 	  <releaseVersion>${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}</releaseVersion>
           <developmentVersion>${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.nextIncrementalVersion}-SNAPSHOT</developmentVersion>
+-->
         </configuration>
       </plugin>
     </plugins>
@@ -86,7 +90,7 @@
   <scm>
     <connection>scm:git:git://github.com/thomasfourest/helloworldmavenpipeline.git</connection>
     <developerConnection>scm:git:git@github.com:thomasfourest/helloworldmavenpipeline.git</developerConnection>
-    <tag>v1.0.0</tag>
+    <tag>v${project.version}</tag>
   </scm>
   
 <!--

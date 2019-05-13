@@ -1,0 +1,392 @@
+tft@gfi502281 MINGW64 ~/Desktop/marineone/helloworldmavenpipeline (master)
+$ export JAVA_HOME="/c/Program Files/Java/jdk1.8.0_201"
+
+tft@gfi502281 MINGW64 ~/Desktop/marineone/helloworldmavenpipeline (master)
+$ "${JAVA_HOME}"/bin/java -version
+
+tft@gfi502281 MINGW64 ~/Desktop/marineone/helloworldmavenpipeline (master)
+$ export MVN_HOME="/c/Program Files/apache-maven-3.6.0"
+
+tft@gfi502281 MINGW64 ~/Desktop/marineone/helloworldmavenpipeline (master)
+$ "${MVN_HOME}"/bin/mvn clean deploy -s maven.settings.xml
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------< com.itnsa:helloworld >------------------------
+[INFO] Building myhelloworld 1.0.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ helloworld ---
+[INFO] Deleting C:\Users\tft\Desktop\helloworldmavenpipeline\target
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ helloworld ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ helloworld ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to C:\Users\tft\Desktop\helloworldmavenpipeline\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ helloworld ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\Users\tft\Desktop\helloworldmavenpipeline\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ helloworld ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ helloworld ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ helloworld ---
+[INFO] Building jar: C:\Users\tft\Desktop\helloworldmavenpipeline\target\helloworld-1.0.0-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ helloworld ---
+[INFO] Installing C:\Users\tft\Desktop\helloworldmavenpipeline\target\helloworld-1.0.0-SNAPSHOT.jar to C:\Users\tft\.m2\repository\com\itnsa\helloworld\1.0.0-SNAPSHOT\helloworld-1.0.0-SNAPSHOT.jar
+[INFO] Installing C:\Users\tft\Desktop\helloworldmavenpipeline\pom.xml to C:\Users\tft\.m2\repository\com\itnsa\helloworld\1.0.0-SNAPSHOT\helloworld-1.0.0-SNAPSHOT.pom
+[INFO]
+[INFO] --- maven-deploy-plugin:2.7:deploy (default-deploy) @ helloworld ---
+Downloading from deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/com/itnsa/helloworld/1.0.0-SNAPSHOT/maven-metadata.xml
+avr. 15, 2019 4:37:22 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+avr. 15, 2019 4:37:22 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+Downloaded from deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/com/itnsa/helloworld/1.0.0-SNAPSHOT/maven-metadata.xml (769 B at 1.1 kB/s)
+Uploading to deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/com/itnsa/helloworld/1.0.0-SNAPSHOT/helloworld-1.0.0-20190415.143722-3.jar
+avr. 15, 2019 4:37:22 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+avr. 15, 2019 4:37:22 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+avr. 15, 2019 4:37:23 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+avr. 15, 2019 4:37:23 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+avr. 15, 2019 4:37:23 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+avr. 15, 2019 4:37:23 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+Uploaded to deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/com/itnsa/helloworld/1.0.0-SNAPSHOT/helloworld-1.0.0-20190415.143722-3.jar (7.3 kB at 11 kB/s)
+Uploading to deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/com/itnsa/helloworld/1.0.0-SNAPSHOT/helloworld-1.0.0-20190415.143722-3.pom
+avr. 15, 2019 4:37:23 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+avr. 15, 2019 4:37:23 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+avr. 15, 2019 4:37:23 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+avr. 15, 2019 4:37:23 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+avr. 15, 2019 4:37:23 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+avr. 15, 2019 4:37:23 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+Uploaded to deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/com/itnsa/helloworld/1.0.0-SNAPSHOT/helloworld-1.0.0-20190415.143722-3.pom (6.4 kB at 14 kB/s)
+Downloading from deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/com/itnsa/helloworld/maven-metadata.xml
+avr. 15, 2019 4:37:23 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+avr. 15, 2019 4:37:24 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+Downloaded from deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/com/itnsa/helloworld/maven-metadata.xml (279 B at 1.8 kB/s)
+Uploading to deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/com/itnsa/helloworld/1.0.0-SNAPSHOT/maven-metadata.xml
+avr. 15, 2019 4:37:24 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+avr. 15, 2019 4:37:24 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+avr. 15, 2019 4:37:24 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+avr. 15, 2019 4:37:24 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+avr. 15, 2019 4:37:24 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+avr. 15, 2019 4:37:24 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+Uploaded to deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/com/itnsa/helloworld/1.0.0-SNAPSHOT/maven-metadata.xml (1.5 kB at 3.3 kB/s)
+Uploading to deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/com/itnsa/helloworld/maven-metadata.xml
+avr. 15, 2019 4:37:24 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+avr. 15, 2019 4:37:24 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+avr. 15, 2019 4:37:24 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+avr. 15, 2019 4:37:24 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+avr. 15, 2019 4:37:24 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+avr. 15, 2019 4:37:24 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+INFOS: basic authentication scheme selected
+Uploaded to deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationSnapshot/com/itnsa/helloworld/maven-metadata.xml (558 B at 1.2 kB/s)
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.741 s
+[INFO] Finished at: 2019-04-15T16:37:25+02:00
+[INFO] ------------------------------------------------------------------------
+
+tft@gfi502281 MINGW64 ~/Desktop/marineone/helloworldmavenpipeline (master)
+$ "${MVN_HOME}"/bin/mvn initialize release:clean release:prepare release:perform -s maven.settings.xml
+[INFO] Scanning for projects...
+[INFO]
+[INFO] -----------------< com.devops:helloworldmavenpipeline >-----------------
+[INFO] Building helloworldmavenpipeline 1.0.4-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- build-helper-maven-plugin:3.0.0:parse-version (parse-versions-for-release) @ helloworldmavenpipeline ---
+[INFO]
+[INFO] -----------------< com.devops:helloworldmavenpipeline >-----------------
+[INFO] Building helloworldmavenpipeline 1.0.4-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-release-plugin:2.5.3:clean (default-cli) @ helloworldmavenpipeline ---
+[INFO] Cleaning up after release...
+[INFO]
+[INFO] --- maven-release-plugin:2.5.3:prepare (default-cli) @ helloworldmavenpipeline ---
+[INFO] Verifying that there are no local modifications...
+[INFO]   ignoring changes on: **\pom.xml.next, **\release.properties, **\pom.xml.branch, **\pom.xml.tag, **\pom.xml.backup, **\pom.xml.releaseBackup
+[INFO] Executing: cmd.exe /X /C "git rev-parse --show-toplevel"
+[INFO] Working directory: C:\Users\tft\Desktop\marineone\helloworldmavenpipeline
+[INFO] Executing: cmd.exe /X /C "git status --porcelain ."
+[INFO] Working directory: C:\Users\tft\Desktop\marineone\helloworldmavenpipeline
+[WARNING] Ignoring unrecognized line: ?? release.properties
+[INFO] Checking dependencies and plugins for snapshots ...
+[INFO] Transforming 'helloworldmavenpipeline'...
+[INFO] Not generating release POMs
+[INFO] Executing goals 'clean verify'...
+[WARNING] Maven will be executed in interactive mode, but no input stream has been configured for this MavenInvoker instance.
+[INFO] [INFO] Scanning for projects...
+[INFO] [INFO]
+[INFO] [INFO] -----------------< com.devops:helloworldmavenpipeline >-----------------
+[INFO] [INFO] Building helloworldmavenpipeline 1.0.4
+[INFO] [INFO] --------------------------------[ jar ]---------------------------------
+[INFO] [INFO]
+[INFO] [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ helloworldmavenpipeline ---
+[INFO] [INFO] Deleting C:\Users\tft\Desktop\marineone\helloworldmavenpipeline\target
+[INFO] [INFO]
+[INFO] [INFO] --- build-helper-maven-plugin:3.0.0:parse-version (parse-versions-for-release) @ helloworldmavenpipeline ---
+[INFO] [INFO]
+[INFO] [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ helloworldmavenpipeline ---
+[INFO] [WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] [INFO] Copying 1 resource
+[INFO] [INFO]
+[INFO] [INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ helloworldmavenpipeline ---
+[INFO] [INFO] Changes detected - recompiling the module!
+[INFO] [WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] [INFO] Compiling 1 source file to C:\Users\tft\Desktop\marineone\helloworldmavenpipeline\target\classes
+[INFO] [INFO]
+[INFO] [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ helloworldmavenpipeline ---
+[INFO] [WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] [INFO] Copying 1 resource
+[INFO] [INFO]
+[INFO] [INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ helloworldmavenpipeline ---
+[INFO] [INFO] Changes detected - recompiling the module!
+[INFO] [WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] [INFO] Compiling 1 source file to C:\Users\tft\Desktop\marineone\helloworldmavenpipeline\target\test-classes
+[INFO] [INFO]
+[INFO] [INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ helloworldmavenpipeline ---
+[INFO] [INFO] Surefire report directory: C:\Users\tft\Desktop\marineone\helloworldmavenpipeline\target\surefire-reports
+[INFO]
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.devops.MyHelloTest
+[INFO] 2019-05-13 14:19:08 DEBUG MyHello:22 - This is debug : Hello
+[INFO] 2019-05-13 14:19:08 INFO  MyHello:26 - This is info : Hello
+[INFO] 2019-05-13 14:19:08 WARN  MyHello:29 - This is warn : Hello
+[INFO] 2019-05-13 14:19:08 ERROR MyHello:30 - This is fake error : Hello
+[INFO] 2019-05-13 14:19:08 FATAL MyHello:31 - This is fake fatal : Hello
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.14 sec
+[INFO]
+[INFO] Results :
+[INFO]
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO]
+[INFO] [INFO]
+[INFO] [INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ helloworldmavenpipeline ---
+[INFO] [INFO] Building jar: C:\Users\tft\Desktop\marineone\helloworldmavenpipeline\target\helloworldmavenpipeline-1.0.4.jar
+[INFO] [INFO] ------------------------------------------------------------------------
+[INFO] [INFO] BUILD SUCCESS
+[INFO] [INFO] ------------------------------------------------------------------------
+[INFO] [INFO] Total time:  3.731 s
+[INFO] [INFO] Finished at: 2019-05-13T14:19:08+02:00
+[INFO] [INFO] ------------------------------------------------------------------------
+[INFO] Checking in modified POMs...
+[INFO] Executing: cmd.exe /X /C "git add -- pom.xml"
+[INFO] Working directory: C:\Users\tft\Desktop\marineone\helloworldmavenpipeline
+[INFO] Executing: cmd.exe /X /C "git rev-parse --show-toplevel"
+[INFO] Working directory: C:\Users\tft\Desktop\marineone\helloworldmavenpipeline
+[INFO] Executing: cmd.exe /X /C "git status --porcelain ."
+[INFO] Working directory: C:\Users\tft\Desktop\marineone\helloworldmavenpipeline
+[WARNING] Ignoring unrecognized line: ?? pom.xml.releaseBackup
+[WARNING] Ignoring unrecognized line: ?? release.properties
+[WARNING] Ignoring unrecognized line: ?? target/helloworldmavenpipeline-1.0.4.jar
+[INFO] Executing: cmd.exe /X /C "git commit --verbose -F C:\Users\tft\AppData\Local\Temp\maven-scm-448043034.commit pom.xml"
+[INFO] Working directory: C:\Users\tft\Desktop\marineone\helloworldmavenpipeline
+[INFO] Executing: cmd.exe /X /C "git symbolic-ref HEAD"
+[INFO] Working directory: C:\Users\tft\Desktop\marineone\helloworldmavenpipeline
+[INFO] Executing: cmd.exe /X /C "git push git@github.com:thomasfourest/helloworldmavenpipeline.git refs/heads/master:refs/heads/master"
+[INFO] Working directory: C:\Users\tft\Desktop\marineone\helloworldmavenpipeline
+[INFO] Tagging release with the label v1.0.4...
+[INFO] Executing: cmd.exe /X /C "git tag -F C:\Users\tft\AppData\Local\Temp\maven-scm-147797003.commit v1.0.4"
+[INFO] Working directory: C:\Users\tft\Desktop\marineone\helloworldmavenpipeline
+[INFO] Executing: cmd.exe /X /C "git push git@github.com:thomasfourest/helloworldmavenpipeline.git refs/tags/v1.0.4"
+[INFO] Working directory: C:\Users\tft\Desktop\marineone\helloworldmavenpipeline
+[INFO] Executing: cmd.exe /X /C "git ls-files"
+[INFO] Working directory: C:\Users\tft\Desktop\marineone\helloworldmavenpipeline
+[INFO] Transforming 'helloworldmavenpipeline'...
+[INFO] Not removing release POMs
+[INFO] Checking in modified POMs...
+[INFO] Executing: cmd.exe /X /C "git add -- pom.xml"
+[INFO] Working directory: C:\Users\tft\Desktop\marineone\helloworldmavenpipeline
+[INFO] Executing: cmd.exe /X /C "git rev-parse --show-toplevel"
+[INFO] Working directory: C:\Users\tft\Desktop\marineone\helloworldmavenpipeline
+[INFO] Executing: cmd.exe /X /C "git status --porcelain ."
+[INFO] Working directory: C:\Users\tft\Desktop\marineone\helloworldmavenpipeline
+[WARNING] Ignoring unrecognized line: ?? pom.xml.releaseBackup
+[WARNING] Ignoring unrecognized line: ?? release.properties
+[WARNING] Ignoring unrecognized line: ?? target/helloworldmavenpipeline-1.0.4.jar
+[INFO] Executing: cmd.exe /X /C "git commit --verbose -F C:\Users\tft\AppData\Local\Temp\maven-scm-1446340047.commit pom.xml"
+[INFO] Working directory: C:\Users\tft\Desktop\marineone\helloworldmavenpipeline
+[INFO] Executing: cmd.exe /X /C "git symbolic-ref HEAD"
+[INFO] Working directory: C:\Users\tft\Desktop\marineone\helloworldmavenpipeline
+[INFO] Executing: cmd.exe /X /C "git push git@github.com:thomasfourest/helloworldmavenpipeline.git refs/heads/master:refs/heads/master"
+[INFO] Working directory: C:\Users\tft\Desktop\marineone\helloworldmavenpipeline
+[INFO] Release preparation complete.
+[INFO]
+[INFO] --- maven-release-plugin:2.5.3:perform (default-cli) @ helloworldmavenpipeline ---
+[INFO] Checking out the project to perform the release ...
+[INFO] Executing: cmd.exe /X /C "git clone --branch v1.0.4 git@github.com:thomasfourest/helloworldmavenpipeline.git C:\Users\tft\Desktop\marineone\helloworldmavenpipeline\target\checkout"
+[INFO] Working directory: C:\Users\tft\Desktop\marineone\helloworldmavenpipeline\target
+[INFO] Executing: cmd.exe /X /C "git ls-remote git@github.com:thomasfourest/helloworldmavenpipeline.git"
+[INFO] Working directory: C:\Users\tft\AppData\Local\Temp
+[INFO] Executing: cmd.exe /X /C "git fetch git@github.com:thomasfourest/helloworldmavenpipeline.git"
+[INFO] Working directory: C:\Users\tft\Desktop\marineone\helloworldmavenpipeline\target\checkout
+[INFO] Executing: cmd.exe /X /C "git checkout v1.0.4"
+[INFO] Working directory: C:\Users\tft\Desktop\marineone\helloworldmavenpipeline\target\checkout
+[INFO] Executing: cmd.exe /X /C "git ls-files"
+[INFO] Working directory: C:\Users\tft\Desktop\marineone\helloworldmavenpipeline\target\checkout
+[INFO] Invoking perform goals in directory C:\Users\tft\Desktop\marineone\helloworldmavenpipeline\target\checkout
+[INFO] Executing goals 'deploy'...
+[WARNING] Maven will be executed in interactive mode, but no input stream has been configured for this MavenInvoker instance.
+[INFO] [INFO] Scanning for projects...
+[INFO] [INFO]
+[INFO] [INFO] -----------------< com.devops:helloworldmavenpipeline >-----------------
+[INFO] [INFO] Building helloworldmavenpipeline 1.0.4
+[INFO] [INFO] --------------------------------[ jar ]---------------------------------
+[INFO] [INFO]
+[INFO] [INFO] --- build-helper-maven-plugin:3.0.0:parse-version (parse-versions-for-release) @ helloworldmavenpipeline ---
+[INFO] [INFO]
+[INFO] [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ helloworldmavenpipeline ---
+[INFO] [WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] [INFO] Copying 1 resource
+[INFO] [INFO]
+[INFO] [INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ helloworldmavenpipeline ---
+[INFO] [INFO] Changes detected - recompiling the module!
+[INFO] [WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] [INFO] Compiling 1 source file to C:\Users\tft\Desktop\marineone\helloworldmavenpipeline\target\checkout\target\classes
+[INFO] [INFO]
+[INFO] [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ helloworldmavenpipeline ---
+[INFO] [WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] [INFO] Copying 1 resource
+[INFO] [INFO]
+[INFO] [INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ helloworldmavenpipeline ---
+[INFO] [INFO] Changes detected - recompiling the module!
+[INFO] [WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] [INFO] Compiling 1 source file to C:\Users\tft\Desktop\marineone\helloworldmavenpipeline\target\checkout\target\test-classes
+[INFO] [INFO]
+[INFO] [INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ helloworldmavenpipeline ---
+[INFO] [INFO] Surefire report directory: C:\Users\tft\Desktop\marineone\helloworldmavenpipeline\target\checkout\target\surefire-reports
+[INFO]
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.devops.MyHelloTest
+[INFO] 2019-05-13 14:19:30 DEBUG MyHello:22 - This is debug : Hello
+[INFO] 2019-05-13 14:19:30 INFO  MyHello:26 - This is info : Hello
+[INFO] 2019-05-13 14:19:30 WARN  MyHello:29 - This is warn : Hello
+[INFO] 2019-05-13 14:19:30 ERROR MyHello:30 - This is fake error : Hello
+[INFO] 2019-05-13 14:19:30 FATAL MyHello:31 - This is fake fatal : Hello
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.141 sec
+[INFO]
+[INFO] Results :
+[INFO]
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO]
+[INFO] [INFO]
+[INFO] [INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ helloworldmavenpipeline ---
+[INFO] [INFO] Building jar: C:\Users\tft\Desktop\marineone\helloworldmavenpipeline\target\checkout\target\helloworldmavenpipeline-1.0.4.jar
+[INFO] [INFO]
+[INFO] [INFO] --- maven-install-plugin:2.4:install (default-install) @ helloworldmavenpipeline ---
+[INFO] [INFO] Installing C:\Users\tft\Desktop\marineone\helloworldmavenpipeline\target\checkout\target\helloworldmavenpipeline-1.0.4.jar to C:\Users\tft\.m2\repository\com\devops\helloworldmavenpipeline\1.0.4\helloworldmavenpipeline-1.0.4.jar
+[INFO] [INFO] Installing C:\Users\tft\Desktop\marineone\helloworldmavenpipeline\target\checkout\pom.xml to C:\Users\tft\.m2\repository\com\devops\helloworldmavenpipeline\1.0.4\helloworldmavenpipeline-1.0.4.pom
+[INFO] [INFO]
+[INFO] [INFO] --- maven-deploy-plugin:2.7:deploy (default-deploy) @ helloworldmavenpipeline ---
+[INFO] Uploading to deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationRelease/com/devops/helloworldmavenpipeline/1.0.4/helloworldmavenpipeline-1.0.4.jar
+[INFO] mai 13, 2019 2:19:30 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+[INFO] INFOS: basic authentication scheme selected
+[INFO] Progress (1): 4.1/4.3 kB
+[INFO] Progress (1): 4.3 kB
+[INFO] mai 13, 2019 2:19:30 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+[INFO] INFOS: basic authentication scheme selected
+[INFO] mai 13, 2019 2:19:31 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+[INFO] INFOS: basic authentication scheme selected
+[INFO] mai 13, 2019 2:19:31 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+[INFO] INFOS: basic authentication scheme selected
+[INFO] mai 13, 2019 2:19:31 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+[INFO] INFOS: basic authentication scheme selected
+[INFO] mai 13, 2019 2:19:31 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+[INFO] INFOS: basic authentication scheme selected
+[INFO]
+[INFO] Uploaded to deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationRelease/com/devops/helloworldmavenpipeline/1.0.4/helloworldmavenpipeline-1.0.4.jar (8.7 kB at 13 kB/s)
+[INFO] Uploading to deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationRelease/com/devops/helloworldmavenpipeline/1.0.4/helloworldmavenpipeline-1.0.4.pom
+[INFO] mai 13, 2019 2:19:31 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+[INFO] INFOS: basic authentication scheme selected
+[INFO] Progress (1): 4.1/5.2 kB
+[INFO] Progress (1): 5.2 kB
+[INFO] mai 13, 2019 2:19:31 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+[INFO] INFOS: basic authentication scheme selected
+[INFO] mai 13, 2019 2:19:31 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+[INFO] INFOS: basic authentication scheme selected
+[INFO] mai 13, 2019 2:19:31 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+[INFO] INFOS: basic authentication scheme selected
+[INFO] mai 13, 2019 2:19:31 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+[INFO] INFOS: basic authentication scheme selected
+[INFO] mai 13, 2019 2:19:31 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+[INFO] INFOS: basic authentication scheme selected
+[INFO]
+[INFO] Uploaded to deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationRelease/com/devops/helloworldmavenpipeline/1.0.4/helloworldmavenpipeline-1.0.4.pom (10 kB at 17 kB/s)
+[INFO] Downloading from deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationRelease/com/devops/helloworldmavenpipeline/maven-metadata.xml
+[INFO] mai 13, 2019 2:19:32 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+[INFO] INFOS: basic authentication scheme selected
+[INFO] Progress (1): 406 B
+[INFO] mai 13, 2019 2:19:32 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+[INFO] INFOS: basic authentication scheme selected
+[INFO]
+[INFO] Downloaded from deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationRelease/com/devops/helloworldmavenpipeline/maven-metadata.xml (406 B at 2.0 kB/s)
+[INFO] Uploading to deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationRelease/com/devops/helloworldmavenpipeline/maven-metadata.xml
+[INFO] mai 13, 2019 2:19:32 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+[INFO] INFOS: basic authentication scheme selected
+[INFO] Progress (1): 437 B
+[INFO] mai 13, 2019 2:19:32 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+[INFO] INFOS: basic authentication scheme selected
+[INFO] mai 13, 2019 2:19:32 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+[INFO] INFOS: basic authentication scheme selected
+[INFO] mai 13, 2019 2:19:32 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+[INFO] INFOS: basic authentication scheme selected
+[INFO] mai 13, 2019 2:19:32 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+[INFO] INFOS: basic authentication scheme selected
+[INFO] mai 13, 2019 2:19:32 PM org.apache.commons.httpclient.auth.AuthChallengeProcessor selectAuthScheme
+[INFO] INFOS: basic authentication scheme selected
+[INFO]
+[INFO] Uploaded to deploy.nexus: dav:http://7kwdf02/nexus/content/repositories/repoIndustrialisationRelease/com/devops/helloworldmavenpipeline/maven-metadata.xml (874 B at 1.6 kB/s)
+[INFO] [INFO] ------------------------------------------------------------------------
+[INFO] [INFO] BUILD SUCCESS
+[INFO] [INFO] ------------------------------------------------------------------------
+[INFO] [INFO] Total time:  5.762 s
+[INFO] [INFO] Finished at: 2019-05-13T14:19:32+02:00
+[INFO] [INFO] ------------------------------------------------------------------------
+[INFO] Cleaning up after release...
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  31.731 s
+[INFO] Finished at: 2019-05-13T14:19:32+02:00
+[INFO] ------------------------------------------------------------------------
+
+tft@gfi502281 MINGW64 ~/Desktop/marineone/helloworldmavenpipeline (master)

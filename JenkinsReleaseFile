@@ -25,6 +25,15 @@ pipeline {
         deleteDir()
       }
     }
+
+/*
+    stage("checkout"){
+      steps{
+        git branch: 'master', url: "https://github.com/thomasfourest/helloworldgradlepipeline.git"
+      }		
+    }
+*/
+	
     stage('Checkout master branch') {
       steps{
         dir("masterbranch"){
