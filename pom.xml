@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.devops</groupId>
   <artifactId>helloworldmavenpipeline</artifactId>
-  <version>1.0.5-SNAPSHOT</version>
+  <version>${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}</version>
   <name>helloworldmavenpipeline</name>
   <url>http://maven.apache.org</url>
   
@@ -86,7 +86,7 @@
   <scm>
     <connection>scm:git:git://github.com/thomasfourest/helloworldmavenpipeline.git</connection>
     <developerConnection>scm:git:git@github.com:thomasfourest/helloworldmavenpipeline.git</developerConnection>
-    <tag>v1.0.0</tag>
+    <tag>v${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}</tag>
   </scm>
   
 <!--
