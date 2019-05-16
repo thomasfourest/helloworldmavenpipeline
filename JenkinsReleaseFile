@@ -66,23 +66,23 @@ pipeline {
     }
   }
 
-  post {
-    always {
-      junit allowEmptyResults: true, testResults: '**/target/surefire-reports/TEST*.xml'
-      echo 'clean up our workspace'
-      script {
-        def wrkspcDir = pwd()
-        dir("${wrkspcDir}@script") {
-          println "delete ${wrkspcDir}@script"
-          deleteDir()
-        }
-        dir("${wrkspcDir}@tmp") {
-          println "delete ${wrkspcDir}@tmp"
-          deleteDir()
-        }
-      }
-      cleanWs cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenUnstable: true, notFailBuild: true
-    }
-  }
+//  post {
+//    always {
+//      junit allowEmptyResults: true, testResults: '**/target/surefire-reports/TEST*.xml'
+//      echo 'clean up our workspace'
+//      script {
+//        def wrkspcDir = pwd()
+//        dir("${wrkspcDir}@script") {
+//          println "delete ${wrkspcDir}@script"
+//          deleteDir()
+//        }
+//        dir("${wrkspcDir}@tmp") {
+//          println "delete ${wrkspcDir}@tmp"
+//          deleteDir()
+//        }
+//      }
+//      cleanWs cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenUnstable: true, notFailBuild: true
+//    }
+//  }
 
 }
