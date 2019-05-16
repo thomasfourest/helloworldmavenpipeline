@@ -34,7 +34,7 @@ pipeline {
 	withMaven(maven: 'maven 3.6.0', mavenOpts: "$MAVEN_OPTS", mavenSettingsConfig: 'maven.settings.xml', publisherStrategy: 'EXPLICIT') {
           echo "M2_HOME = ${M2_HOME}"
           echo "PATH = ${PATH}"
-	  sh "mvn clean deploy -U"	    
+	      sh "mvn clean deploy -U"	    
         }
       }
     }
