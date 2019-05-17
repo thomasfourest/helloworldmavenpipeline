@@ -75,7 +75,7 @@ See also the list of [contributors](https://github.com/thomasfourest/helloworldm
 
 ## License
 
-This project isn't licensed - see the [LICENSE.md](https://www.gnu.org/licenses/gpl-3.0.html) file for general culture. 
+This project isn't licensed - see the [gpl-3.0](https://www.gnu.org/licenses/gpl-3.0.html) file for general culture. 
 
 ## Acknowledgments
 
