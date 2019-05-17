@@ -1,6 +1,6 @@
 # helloworldmavenpipeline
 
-Example of maven build and release method for a simple Springboot project 
+Example of maven build and release method for a simple Java project 
 
 ![alt text](https://github.com/thomasfourest/helloworldmavenpipeline/blob/master/maven-logo-black-on-white.png)
 
@@ -80,5 +80,4 @@ This project isn't licensed - see the [LICENSE.md](https://www.gnu.org/licenses/
 ## Acknowledgments
 
 * Jenkins pipeline
-* Spring Boot
 * etc
