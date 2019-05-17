@@ -65,7 +65,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Versioning
 
-We use [Maven version aexplains by Octopus](https://octopus.com/blog/maven-versioning-explained) for versioning. For the versions available, see the [tags on this repository](https://github.com/thomasfourest/helloworldmavenpipeline/tags). 
+We use [Maven version explained by Octopus](https://octopus.com/blog/maven-versioning-explained) for versioning. For the versions available, see the [tags on this repository](https://github.com/thomasfourest/helloworldmavenpipeline/tags). 
 
 ## Authors
 
