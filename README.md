@@ -75,7 +75,7 @@ See also the list of [contributors](https://github.com/thomasfourest/helloworldm
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project isn't licensed - see the [LICENSE.md](https://www.gnu.org/licenses/gpl-3.0.html) file for general culture. 
 
 ## Acknowledgments
 
